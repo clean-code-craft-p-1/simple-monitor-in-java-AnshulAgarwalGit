@@ -1,5 +1,9 @@
 package vitals;
 
+/**
+ * Monitors vital signs (temperature, pulse rate, oxygen saturation) and alerts when values
+ * are out of safe ranges.
+ */
 public final class VitalsChecker {
   private static final float MIN_TEMPERATURE = 95.0f;
   private static final float MAX_TEMPERATURE = 102.0f;

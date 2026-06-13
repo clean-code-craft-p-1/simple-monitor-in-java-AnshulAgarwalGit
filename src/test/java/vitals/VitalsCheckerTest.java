@@ -7,6 +7,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+/** Test suite for vital signs validation logic. */
 public class VitalsCheckerTest {
 
   @Test
@@ -36,9 +37,15 @@ public class VitalsCheckerTest {
 
   @Test
   public void reportsFirstFailingVitalMessage() {
-    assertEquals("Temperature is critical!", VitalsChecker.firstAlertMessage(94.9f, 72.0f, 98.0f));
-    assertEquals("Pulse Rate is out of range!", VitalsChecker.firstAlertMessage(98.6f, 59.9f, 98.0f));
-    assertEquals("Oxygen Saturation out of range!", VitalsChecker.firstAlertMessage(98.6f, 72.0f, 89.9f));
+    assertEquals(
+        "Temperature is critical!",
+        VitalsChecker.firstAlertMessage(94.9f, 72.0f, 98.0f));
+    assertEquals(
+        "Pulse Rate is out of range!",
+        VitalsChecker.firstAlertMessage(98.6f, 59.9f, 98.0f));
+    assertEquals(
+        "Oxygen Saturation out of range!",
+        VitalsChecker.firstAlertMessage(98.6f, 72.0f, 89.9f));
   }
 
   @Test
